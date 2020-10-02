@@ -22,6 +22,14 @@ reports = []
 reports_len = len(higher_weekly)
 for a in soup.findAll('ul', attrs={'class':'rating clearfix'}):
     ais.append(a)
+print(reports_len)
+print(len(ais))
+stars = []
+for k in ais:
+    stars.append(str(k).count('active'))
+print(stars)
 
-star = ais[0].find('li', attrs={'class':'active'})
-stars = [0]*reports_len
+
+
+# for i in range(reports_len):
+#     for j in ais[i]:
